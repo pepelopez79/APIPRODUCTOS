@@ -1,0 +1,133 @@
+{
+	"info": {
+		"_postman_id": "6cda0893-ecd0-4330-a381-a42b4e86abe2",
+		"name": "APIPRODUCTOS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "27247948"
+	},
+	"item": [
+		{
+			"name": "ListarProductos",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "ListarCategorias",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "DetalleProducto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/APIPRODUCTOS/index.php/detalleProducto?id=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"APIPRODUCTOS",
+						"index.php",
+						"detalleProducto"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListarProductosPaginadosYOrdenadosPorCategoria",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "AgregarProducto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": "http://localhost:3000/APIPRODUCTOS/api.php/agregarProducto"
+			},
+			"response": []
+		},
+		{
+			"name": "ActualizarProducto",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Chocolate\",\r\n    \"categoria\": 2,\r\n    \"pvp\": 1.99,\r\n    \"stock\": 20,\r\n    \"imagen\": \"images/chocolate.jpg\",\r\n    \"observaciones\": \"Lácteo. Poca duración\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/APIPRODUCTOS/index.php/actualizarProducto?id=8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"APIPRODUCTOS",
+						"index.php",
+						"actualizarProducto"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "8"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EliminarProducto",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/APIPRODUCTOS/index.php/eliminarProducto?id=8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"APIPRODUCTOS",
+						"index.php",
+						"eliminarProducto"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "8"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
